@@ -1,0 +1,22 @@
+[
+,[
+,"arn:aws:rds:ap-south-1:913855637631:db:database-1",
+,"mysql",
+,"database-1",
+,"db.t3.micro",
+,"database-1.c5ugcdsxoqsy.ap-south-1.rds.amazonaws.com"
+,],
+,[
+,"arn:aws:rds:ap-south-1:913855637631:db:praveenrds",
+,"mysql",
+,"praveenrds",
+,"db.t3.micro",
+,"praveenrds.c5ugcdsxoqsy.ap-south-1.rds.amazonaws.com"
+,]
+]
+
+
+
+ awk '{
+     printf("%d, %d, %.1lf, %.1lf,%.1lf\n", $1,$2,$3,$4,$5); 
+ }'  rd.text > output.csv
